@@ -10,7 +10,10 @@ const SINGLETON_TYPES = new Set(['siteSettings']);
 // unpublish) gets stripped so editors can't accidentally remove the singleton.
 const SINGLETON_ACTIONS = new Set(['publish', 'discardChanges', 'restore']);
 
-const previewUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const previewUrl =
+  typeof window !== 'undefined'
+    ? window.location.origin
+    : process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
 export default defineConfig({
   basePath: '/studio',
