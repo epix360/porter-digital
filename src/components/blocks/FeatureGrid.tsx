@@ -9,12 +9,12 @@ export function FeatureGrid({ block }: { block: FeatureGridBlock }) {
       {(block.eyebrow || block.heading || block.subheading) && (
         <div className="mx-auto mb-12 max-w-2xl text-center">
           {block.eyebrow && (
-            <p className="mb-3 text-sm font-medium uppercase tracking-wider text-brand-700">
+            <p className="mb-3 text-sm font-medium uppercase tracking-wider text-accent-700">
               {block.eyebrow}
             </p>
           )}
           {block.heading && (
-            <h2 className="font-display text-3xl md:text-4xl">{block.heading}</h2>
+            <h2 className="font-display text-3xl text-brand-600 md:text-4xl">{block.heading}</h2>
           )}
           {block.subheading && (
             <p className="mt-4 text-text-muted">{block.subheading}</p>
@@ -23,16 +23,19 @@ export function FeatureGrid({ block }: { block: FeatureGridBlock }) {
       )}
       <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {features.map((feature) => (
-          <li key={feature._key} className="rounded-lg border border-border p-6">
+          <li
+            key={feature._key}
+            className="rounded-lg border border-border bg-surface-muted p-6 transition-colors hover:border-accent-600"
+          >
             {feature.icon && (
               <div
                 aria-hidden
-                className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md bg-brand-50 text-brand-700"
+                className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md bg-accent-50 text-accent-700"
               >
                 {feature.icon}
               </div>
             )}
-            <h3 className="font-display text-lg">{feature.title}</h3>
+            <h3 className="font-display text-lg text-brand-600">{feature.title}</h3>
             {feature.body && (
               <p className="mt-2 text-sm text-text-muted">{feature.body}</p>
             )}

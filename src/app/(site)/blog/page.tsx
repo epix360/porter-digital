@@ -14,13 +14,13 @@ export default async function BlogIndex() {
 
   return (
     <div className="container py-16">
-      <h1 className="font-display text-4xl">Blog</h1>
+      <h1 className="font-display text-4xl text-brand-600">Blog</h1>
       <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
           <li key={post._id}>
             <Link href={`/blog/${post.slug}`} className="group block">
               {post.coverImage?.asset && (
-                <div className="aspect-[3/2] overflow-hidden rounded-lg bg-neutral-100">
+                <div className="aspect-[3/2] overflow-hidden rounded-lg bg-surface-muted">
                   <SanityImage
                     image={post.coverImage}
                     alt=""
@@ -31,13 +31,13 @@ export default async function BlogIndex() {
                   />
                 </div>
               )}
-              <h2 className="mt-4 font-display text-xl">{post.title}</h2>
+              <h2 className="mt-4 font-display text-xl text-brand-600 transition-colors group-hover:text-accent-700">{post.title}</h2>
               {post.excerpt && (
-                <p className="mt-2 text-sm text-neutral-600">{post.excerpt}</p>
+                <p className="mt-2 text-sm text-text-muted">{post.excerpt}</p>
               )}
               <time
                 dateTime={post.publishedAt}
-                className="mt-2 block text-xs uppercase tracking-wide text-neutral-500"
+                className="mt-2 block text-xs uppercase tracking-wide text-text-muted"
               >
                 {new Date(post.publishedAt).toLocaleDateString()}
               </time>

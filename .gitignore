@@ -1,15 +1,34 @@
 node_modules
-.claude
+modules
 .next
 .vercel
-.env
-.env.local
-.env*.local
-*.log
-.DS_Store
-dist
+.claude
 .turbo
+
+# env
+.env*
+!.env.example
+
+# os
+.DS_Store
+
+# build artifacts
+*.tsbuildinfo
+/out
+/build
+dist
+
+# sanity (generated)
 src/sanity/types.ts
 src/sanity/extract.json
-tsconfig.tsbuildinfo
+
+# package managers
 package-lock.json
+
+# logs
+*.log
+pnpm-debug.log*
+
+# editors
+.idea
+.vscode

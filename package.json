@@ -1,5 +1,5 @@
 {
-  "name": "web-starter",
+  "name": "porter-digital",
   "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@9.12.3",
@@ -30,7 +30,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sanity": "^3.57.0",
-    "styled-components": "^6.1.0"
+    "styled-components": "^6.1.0",
+    "vercel": "^54.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

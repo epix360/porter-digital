@@ -4,34 +4,55 @@
 
 @layer base {
   :root {
-    /* Brand color scale — override per project */
-    --brand-50: 240 249 255;
-    --brand-100: 224 242 254;
-    --brand-200: 186 230 253;
-    --brand-300: 125 211 252;
-    --brand-400: 56 189 248;
-    --brand-500: 14 165 233;
-    --brand-600: 2 132 199;
-    --brand-700: 3 105 161;
-    --brand-800: 7 89 133;
-    --brand-900: 12 74 110;
-    --brand-950: 8 47 73;
+    /* Primary — Charcoal (#36454F) as brand-600 */
+    --brand-50: 244 246 247;
+    --brand-100: 229 233 236;
+    --brand-200: 204 211 216;
+    --brand-300: 168 179 186;
+    --brand-400: 120 134 145;
+    --brand-500: 79 94 106;
+    --brand-600: 54 69 79;
+    --brand-700: 44 57 66;
+    --brand-800: 35 46 53;
+    --brand-900: 26 35 41;
+    --brand-950: 15 21 26;
 
-    /* Accent (secondary) scale */
-    --accent-50: 253 244 255;
-    --accent-500: 168 85 247;
-    --accent-700: 126 34 206;
+    /* Secondary — Silver (#C0C0C0) as secondary-300 */
+    --secondary-50: 250 250 250;
+    --secondary-100: 241 241 241;
+    --secondary-200: 224 224 224;
+    --secondary-300: 192 192 192;
+    --secondary-400: 168 168 168;
+    --secondary-500: 144 144 144;
+    --secondary-600: 112 112 112;
+    --secondary-700: 82 82 82;
+    --secondary-800: 56 56 56;
+    --secondary-900: 31 31 31;
 
-    /* Semantic surface + text tokens */
+    /* Accent — Emerald (#059669 = emerald-600) */
+    --accent-50: 236 253 245;
+    --accent-100: 209 250 229;
+    --accent-200: 167 243 208;
+    --accent-300: 110 231 183;
+    --accent-400: 52 211 153;
+    --accent-500: 16 185 129;
+    --accent-600: 5 150 105;
+    --accent-700: 4 120 87;
+    --accent-800: 6 95 70;
+    --accent-900: 6 78 59;
+
+    /* Surfaces */
     --surface: 255 255 255;
-    --surface-muted: 250 250 250;
-    --surface-inverse: 23 23 23;
+    --surface-muted: 241 245 249;
+    --surface-inverse: 54 69 79;
 
-    --text: 23 23 23;
-    --text-muted: 82 82 82;
+    /* Text — charcoal headers, slate-500 sub-text */
+    --text: 54 69 79;
+    --text-muted: 100 116 139;
     --text-inverse: 255 255 255;
 
-    --border: 229 229 229;
+    /* Borders — muted gray (#E2E8F0) */
+    --border: 226 232 240;
   }
 
   html {

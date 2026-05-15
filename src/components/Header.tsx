@@ -4,9 +4,9 @@ import type { SiteSettings } from '@/lib/types';
 
 export function Header({ settings }: { settings: SiteSettings | null }) {
   return (
-    <header className="border-b border-neutral-200">
+    <header className="border-b border-border bg-surface">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="font-display text-lg font-medium">
+        <Link href="/" className="font-display text-lg font-medium text-brand-600">
           {settings?.title || 'Site'}
         </Link>
         <nav className="flex items-center gap-6">
@@ -16,7 +16,7 @@ export function Header({ settings }: { settings: SiteSettings | null }) {
               href={resolveLink(link)}
               target={link.newTab ? '_blank' : undefined}
               rel={link.newTab ? 'noopener noreferrer' : undefined}
-              className="text-sm text-neutral-700 hover:text-neutral-900"
+              className="text-sm font-medium text-text transition-colors hover:text-accent-700"
             >
               {link.label}
             </Link>

@@ -4,8 +4,8 @@ import type { TestimonialBlock } from '@/lib/types';
 export function Testimonial({ block }: { block: TestimonialBlock }) {
   return (
     <section className="container py-16 md:py-24">
-      <figure className="mx-auto max-w-3xl text-center">
-        <blockquote className="font-display text-2xl leading-snug md:text-3xl">
+      <figure className="mx-auto max-w-3xl rounded-2xl border border-border bg-surface-muted p-10 text-center">
+        <blockquote className="font-display text-2xl leading-snug text-brand-600 md:text-3xl">
           “{block.quote}”
         </blockquote>
         {(block.authorName || block.authorTitle || block.authorImage?.asset) && (
