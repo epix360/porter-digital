@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand color scale — override per project */
+    --brand-50: 240 249 255;
+    --brand-100: 224 242 254;
+    --brand-200: 186 230 253;
+    --brand-300: 125 211 252;
+    --brand-400: 56 189 248;
+    --brand-500: 14 165 233;
+    --brand-600: 2 132 199;
+    --brand-700: 3 105 161;
+    --brand-800: 7 89 133;
+    --brand-900: 12 74 110;
+    --brand-950: 8 47 73;
+
+    /* Accent (secondary) scale */
+    --accent-50: 253 244 255;
+    --accent-500: 168 85 247;
+    --accent-700: 126 34 206;
+
+    /* Semantic surface + text tokens */
+    --surface: 255 255 255;
+    --surface-muted: 250 250 250;
+    --surface-inverse: 23 23 23;
+
+    --text: 23 23 23;
+    --text-muted: 82 82 82;
+    --text-inverse: 255 255 255;
+
+    --border: 229 229 229;
+  }
+
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-surface text-text;
+  }
+}

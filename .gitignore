@@ -1,0 +1,15 @@
+node_modules
+.claude
+.next
+.vercel
+.env
+.env.local
+.env*.local
+*.log
+.DS_Store
+dist
+.turbo
+src/sanity/types.ts
+src/sanity/extract.json
+tsconfig.tsbuildinfo
+package-lock.json
