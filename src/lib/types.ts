@@ -119,6 +119,15 @@ export type FaqBlock = {
   }[];
 };
 
+export type ContactFormBlock = {
+  _type: 'contactForm';
+  _key: string;
+  heading?: string;
+  intro?: string;
+  submitLabel?: string;
+  successMessage?: string;
+};
+
 export type Section =
   | HeroBlock
   | RichTextBlock
@@ -126,7 +135,8 @@ export type Section =
   | FeatureGridBlock
   | LogoCloudBlock
   | TestimonialBlock
-  | FaqBlock;
+  | FaqBlock
+  | ContactFormBlock;
 
 export type Page = {
   _id: string;

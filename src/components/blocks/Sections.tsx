@@ -6,6 +6,7 @@ import { FeatureGrid } from './FeatureGrid';
 import { LogoCloud } from './LogoCloud';
 import { Testimonial } from './Testimonial';
 import { Faq } from './Faq';
+import { ContactForm } from './ContactForm';
 
 export function Sections({ sections }: { sections: Section[] }) {
   return (
@@ -26,6 +27,8 @@ export function Sections({ sections }: { sections: Section[] }) {
             return <Testimonial key={section._key} block={section} />;
           case 'faq':
             return <Faq key={section._key} block={section} />;
+          case 'contactForm':
+            return <ContactForm key={section._key} block={section} />;
           default: {
             if (process.env.NODE_ENV !== 'production') {
               // Guards against the "added schema, forgot to register renderer" mistake.

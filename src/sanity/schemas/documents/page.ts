@@ -28,6 +28,7 @@ export const page = defineType({
         { type: 'logoCloud' },
         { type: 'testimonial' },
         { type: 'faq' },
+        { type: 'contactForm' },
       ],
     }),
     defineField({

@@ -13,6 +13,7 @@ import { featureGrid } from './objects/blocks/featureGrid';
 import { logoCloud } from './objects/blocks/logoCloud';
 import { testimonial } from './objects/blocks/testimonial';
 import { faq } from './objects/blocks/faq';
+import { contactForm } from './objects/blocks/contactForm';
 
 export const schemaTypes = [
   // Documents
@@ -33,4 +34,5 @@ export const schemaTypes = [
   logoCloud,
   testimonial,
   faq,
+  contactForm,
 ];

@@ -8,7 +8,13 @@ import { Turnstile } from './Turnstile';
 
 type ContactFormProps = {
   turnstileSiteKey: string;
+  submitLabel?: string;
+  successMessage?: string;
 };
+
+const DEFAULT_SUBMIT_LABEL = 'Send message';
+const DEFAULT_SUCCESS_MESSAGE =
+  "Thanks — your message is on its way. We'll get back to you shortly.";
 
 const zodResolver: Resolver<ContactFormValues> = async (values) => {
   const result = contactFormSchema.safeParse(values);
@@ -25,7 +31,11 @@ const zodResolver: Resolver<ContactFormValues> = async (values) => {
   return { values: {}, errors };
 };
 
-export function ContactForm({ turnstileSiteKey }: ContactFormProps) {
+export function ContactForm({
+  turnstileSiteKey,
+  submitLabel,
+  successMessage,
+}: ContactFormProps) {
   const [turnstileToken, setTurnstileToken] = useState('');
   const [serverState, setServerState] = useState<ContactFormState>({
     status: 'idle',
@@ -74,9 +84,13 @@ export function ContactForm({ turnstileSiteKey }: ContactFormProps) {
 
   if (serverState.status === 'success') {
     return (
-      <div className="rounded-md border border-green-200 bg-green-50 p-4 text-green-900">
-        <p className="font-medium">Thanks — your message is on its way.</p>
-        <p className="text-sm">We&apos;ll get back to you shortly.</p>
+      <div
+        className="rounded-md border border-green-200 bg-green-50 p-4 text-green-900"
+        role="status"
+      >
+        <p className="font-medium whitespace-pre-line">
+          {successMessage?.trim() || DEFAULT_SUCCESS_MESSAGE}
+        </p>
       </div>
     );
   }
@@ -176,7 +190,7 @@ export function ContactForm({ turnstileSiteKey }: ContactFormProps) {
         disabled={isPending}
         className="inline-flex items-center rounded-md bg-neutral-900 px-4 py-2 text-sm font-medium text-white hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {isPending ? 'Sending…' : 'Send message'}
+        {isPending ? 'Sending…' : submitLabel?.trim() || DEFAULT_SUBMIT_LABEL}
       </button>
     </form>
   );

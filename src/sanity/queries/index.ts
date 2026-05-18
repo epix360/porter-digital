@@ -85,7 +85,11 @@ export const pageBySlugQuery = groq`
         _key,
         question,
         answer
-      }
+      },
+      // contactForm
+      intro,
+      submitLabel,
+      successMessage
     },
     ${seoFields}
   }
