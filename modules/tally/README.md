@@ -4,11 +4,16 @@ Embed Tally forms with React and handle webhook submissions.
 
 ## Install
 
-```bash
-pnpm add @tally-so/embed
-```
+No npm package required — the included `TallyEmbed` component is a pure
+`<iframe>` wrapper with zero dependencies. Tally does not publish an npm
+package; if you need their enhanced behavior (auto-resize, popups, etc.),
+load their script via `next/script`:
 
-(Or just use the `<iframe>` approach — no package needed.)
+```tsx
+import Script from 'next/script';
+
+<Script src="https://tally.so/widgets/embed.js" strategy="lazyOnload" />
+```
 
 ## Copy in
 
